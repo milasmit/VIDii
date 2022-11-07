@@ -9,6 +9,9 @@
 
 body {
   margin:0;
+  background-color: var(--achtergrond);
+  position: relative;
+  width: 100vw;
 }
 
 button:not([disabled]) {
@@ -24,7 +27,12 @@ button:not([disabled]) {
 /*********************/
 
 :root {
-  --color-headings:crimson
+  --color-headings:crimson;
+  --achtergrond:rgb(251, 191, 78);
+  --fotolijst:rgb(120, 51, 14);
+  --vloer:rgb(87, 49, 15);
+  --kastvlakken: rgb(207, 161, 137);
+  --kastachtergrond: rgb(173 97 57);
 }
 
 
@@ -37,9 +45,202 @@ button:not([disabled]) {
 
 h1 {
   color:var(--color-headings);
+  text-align: center;
+  font-family: 'DynaPuff', cursive;
+}
+
+p {
+  text-align: center;
+}
+
+/* main > img:first-of-type {
+  width: 25vw;
+  position: absolute;
+  top: 56vh;
+  left: 8.5em;
+} */
+
+button {
+  width: max-content;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* goofy */
+
+main > img:nth-of-type(1) {
+  width: 20vw;
+  position: fixed;
+  bottom: 7vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* bijzettafel */
+
+section:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 30vw;
+  gap: 0;
+  position: absolute;
+  left: 8.5em;
+  top: 50vh;
+}
+
+section > img {
+  width: 6vw;
+  
+}
+
+section > button {
+  display: grid;
+  place-items: end;
+}
+
+section > button > img {
+  width: 6vw;
+  padding: .5em;
+  padding-bottom: 0em;
+}
+
+section > img:first-of-type{
+  padding: 0;
+}
+
+section > img:nth-of-type(2) {
+  width: 25vw;
+  grid-column: span 3;
+  padding: 0;
+}
+
+/* foto gallerij */
+
+ol:first-of-type {
+  display: grid;
+  gap: .5vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  padding: .5em;
+
+  position: absolute;
+  top: 6em;
+  left: 8em;
+}
+
+ol:first-of-type li {
+  list-style-type: none;
+  border: .5vw solid var(--fotolijst);
+  height: fit-content;
+}
+
+/* om het witte randje onder de foto weg te halen */
+ol:first-of-type li button{
+  display: grid;
+  place-items: center;
+  width: 7vw;
+  height: max-content;
+}
+
+ol:first-of-type li button img{
+  grid-column: span 2;
+  width: 7vw;
 }
 
 
-/* ... */
+ol:first-of-type li:nth-of-type(2){
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
 
+ol:first-of-type li:nth-of-type(5){
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+}
+
+
+
+/* kast */
+
+ol:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: var(--kastachtergrond);
+  width: 25vw;
+  height: 35vw;
+  border: 2em;
+  border-color: black;
+  padding: .5em;
+
+  position: absolute;
+  top: 6em;
+  right: 8em;
+}
+
+ol:nth-of-type(2) li{
+  background-color: var(--kastvlakken);
+  margin: .3em;
+  list-style-type: none;
+  padding: 0em;
+  display: grid;
+  place-items: end center;
+}
+
+ol:nth-of-type(2) li button {
+  display: grid;
+  place-items: end center;
+}
+
+ol:nth-of-type(2) li button img{
+  width: 6vw;
+  padding: 0;
+
+}
+
+/* teksten */
+
+section:nth-of-type(2) {
+  position: fixed;
+  width: 25vw;
+  height: 24vw;
+  left: 62vw;
+  top: 18vw;
+  visibility: hidden;
+}
+
+section:nth-of-type(2) article {
+  background-color: white;
+  border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
+  padding: 1.5vw;
+  box-shadow: .2em .2em 1em black;
+  visibility: hidden;
+}
+
+section:nth-of-type(2) article.visible {
+  visibility: visible;
+}
+
+section:nth-of-type(2) img{
+  width: 10vw;
+}
+
+section:nth-of-type(2) p {
+  text-align: left;
+}
+
+/* vloer */
+
+div {
+  width: 100vw;
+  height: 13vw;
+  background-color: var(--vloer);
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
 
