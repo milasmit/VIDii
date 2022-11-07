@@ -35,6 +35,7 @@ Mijn startniveau is: blauw, maar randje rood denk ik
   - Ik wil juiste, semantische code gebruiken, en alleen classes en IDs gebruiken als het echt niet anders kan.
   - Ik wil de persoonlijkheid van mijn karakter goed terug laten komen in mijn ontwerp.
   - Ik wil een sterk concept hebben dat goed de veranderingen van mijn karakter laat zien.
+
  
 </details>
 
