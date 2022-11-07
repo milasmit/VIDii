@@ -12,10 +12,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 ### Ontwerper:
-Sanne 't Hooft (vervangen door jouw naam)
+Mila Smit
 
 #### Je startniveau:
-Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
+Mijn startniveau is: blauw, maar randje rood denk ik
 
 
 
@@ -31,10 +31,10 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik wil elementen 'tekenen' met CSS in plaats van images gebruiken. 
+  - Ik wil juiste, semantische code gebruiken, en alleen classes en IDs gebruiken als het echt niet anders kan.
+  - Ik wil de persoonlijkheid van mijn karakter goed terug laten komen in mijn ontwerp.
+  - Ik wil een sterk concept hebben dat goed de veranderingen van mijn karakter laat zien.
  
 </details>
 
@@ -76,7 +76,7 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Ik moet mijn knoppen states geven zodat het duidelijk is dat er interactie plaats vindt.
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
@@ -84,7 +84,7 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  De tekst kan nog in een soort strip lettertype zodat het nog beter past bij Goofy.
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
@@ -92,7 +92,28 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
 
   ### Bevinding 3:
-  ...
+  Er zit nog niet veel structuur in mijn CSS (maar er is wel per onderdeel een logische opbouw).
+
+  ### Oplossing:
+  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+
+
+
+  ### Bevinding 4:
+  Ik moet bronnen in mijn CSS neerzetten, en sowieso beter mijn bronnen bijhouden.
+
+  ### Oplossing:
+  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+
+
+
+  ### Bevinding 5:
+  De tekstwolk lijkt nog niet echt alsof Goofy het zegt.
+
+  ### Oplossing:
+  Jasper heeft me een link gestuurd waarmee ik een vorm van een tekstwolk kan maken. Dat is de volgende link: https://bennettfeely.com/clippy/
+
+  Ik weet nog niet of ik het ga gebruiken.
 
 </details>
 
@@ -159,8 +180,9 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://stackoverflow.com/questions/2005954/center-a-positionfixed-element. Om goofy te centreren. (left 50%, transformX(-50%))
+2. https://www.w3schools.com/CSSREF/pr_pos_z-index.php. Om de vloer op de achtergrond te krijgen.
+3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/. Voor alles wat ik met flex moet doen.
+4. https://css-tricks.com/snippets/css/complete-guide-grid/. Voor alles wat ik met grid moet doen.
 
 </details>
