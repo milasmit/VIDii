@@ -49,16 +49,15 @@ h1 {
   font-family: 'DynaPuff', cursive;
 }
 
-p {
-  text-align: center;
+h2 {
+  font-family: 'DynaPuff', cursive;
+  color: var(--color-headings);
 }
 
-/* main > img:first-of-type {
-  width: 25vw;
-  position: absolute;
-  top: 56vh;
-  left: 8.5em;
-} */
+p {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive;
+}
 
 button {
   width: max-content;
@@ -66,6 +65,8 @@ button {
   border: none;
   padding: 0;
 }
+
+
 
 /* goofy */
 
@@ -76,6 +77,8 @@ main > img:nth-of-type(1) {
   left: 50%;
   transform: translateX(-50%);
 }
+
+
 
 /* bijzettafel */
 
@@ -92,12 +95,17 @@ section:first-of-type {
 
 section > img {
   width: 6vw;
-  
+}
+
+section > img:first-of-type{
+  grid-column-start: 2;
 }
 
 section > button {
   display: grid;
   place-items: end;
+  margin: 0;
+  z-index: 10;
 }
 
 section > button > img {
@@ -115,6 +123,16 @@ section > img:nth-of-type(2) {
   grid-column: span 3;
   padding: 0;
 }
+
+
+/* hoedjes verplaatsen */
+section > button.verplaatsen {
+  position: fixed;
+  left: 52%;
+  transform: translateX(-50%);
+  bottom: 33vw;
+}
+
 
 /* foto gallerij */
 
@@ -148,7 +166,6 @@ ol:first-of-type li button img{
   grid-column: span 2;
   width: 7vw;
 }
-
 
 ol:first-of-type li:nth-of-type(2){
   grid-column-start: 3;
@@ -194,6 +211,9 @@ ol:nth-of-type(2) li{
 ol:nth-of-type(2) li button {
   display: grid;
   place-items: end center;
+  z-index: 10;
+  margin: 0;
+  
 }
 
 ol:nth-of-type(2) li button img{
@@ -202,23 +222,48 @@ ol:nth-of-type(2) li button img{
 
 }
 
+/* hoedje naar hoofd */
+ol:nth-of-type(2) li button.verplaatsen{
+  position: fixed;
+  left: 52%;
+  transform: translateX(-50%);
+  bottom: 33vw;
+  /* animation: verplaatsen;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-fill-mode: forwards; */
+}
+
+/* @keyframes verplaatsen {
+  0%{
+    transform: translate(0deg) rotate(0deg);
+  }
+
+  100%{
+    transform: translate(-28vw, 5vw) rotate(360deg) ;
+  }
+} */
+
 /* teksten */
 
 section:nth-of-type(2) {
-  position: fixed;
-  width: 25vw;
-  height: 24vw;
-  left: 62vw;
-  top: 18vw;
   visibility: hidden;
 }
 
 section:nth-of-type(2) article {
   background-color: white;
-  border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
+  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
   padding: 1.5vw;
-  box-shadow: .2em .2em 1em black;
+  box-shadow: .2em .2em 1em rgba(0, 0, 0, 0.418);
   visibility: hidden;
+  position: fixed;
+  left: 62vw;
+  top: 18vw;
+  width: 28vw;
+  height: max-content;
+  z-index: 11;
 }
 
 section:nth-of-type(2) article.visible {
@@ -232,6 +277,8 @@ section:nth-of-type(2) img{
 section:nth-of-type(2) p {
   text-align: left;
 }
+
+
 
 /* vloer */
 

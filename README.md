@@ -185,5 +185,8 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 2. https://www.w3schools.com/CSSREF/pr_pos_z-index.php. Om de vloer op de achtergrond te krijgen.
 3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/. Voor alles wat ik met flex moet doen.
 4. https://css-tricks.com/snippets/css/complete-guide-grid/. Voor alles wat ik met grid moet doen.
+5. https://disney.fandom.com/wiki/Goofy_Through_the_Years. Hielp me met de tijdlijn van Goofy.
+6. https://disney.fandom.com/wiki/Goofy. Alles over Goofy.
+7. https://www.w3schools.com/css/css3_buttons.asp. Om te kijken hoe ik een button allemaal kon stylen. Vooral om te kijken hoe ik heb onzichtbaar kan maken.
 
 </details>
