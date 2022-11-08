@@ -154,7 +154,7 @@ section > button > img {
 
 
 /* ************* */
-/* hoedjes op tafel verplaatsen */
+/* hoedjes naar hoofd */
 section > button.verplaatsen {
   position: fixed;
   left: 52%;
