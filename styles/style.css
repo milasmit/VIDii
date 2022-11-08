@@ -28,13 +28,30 @@ button:not([disabled]) {
 
 :root {
   --color-headings:crimson;
+  --kleur-p: black;
   --achtergrond:rgb(251, 191, 78);
   --fotolijst:rgb(120, 51, 14);
   --vloer:rgb(87, 49, 15);
   --kastvlakken: rgb(207, 161, 137);
-  --kastachtergrond: rgb(173 97 57);
+  --kastachtergrond: rgb(173, 97, 57);
+  --color-focus: crimson;
+  --artikel: white;
+  --artikelschaduw: rgba(0, 0, 0, 0.418);
 }
 
+@media (prefers-color-scheme:dark){
+  :root{
+  --achtergrond:rgb(52, 88, 55);
+  --fotolijst:rgb(41, 31, 25);
+  --vloer:rgb(49, 31, 15);
+  --kastvlakken: rgb(104, 67, 47);
+  --kastachtergrond: rgb(41, 31, 25);
+  --color-headings:white;
+  --kleur-p: white;
+  --artikel: rgb(56, 47, 47);
+  --artikelschaduw: rgba(144, 143, 143, 0.418);
+  }
+}
 
 
 
@@ -57,6 +74,7 @@ h2 {
 p {
   text-align: center;
   font-family: 'Comic Sans MS', cursive;
+  color: var(--kleur-p);
 }
 
 button {
@@ -76,6 +94,7 @@ main > img:nth-of-type(1) {
   bottom: 7vw;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 
@@ -99,6 +118,14 @@ section > img {
 
 section > img:first-of-type{
   grid-column-start: 2;
+  padding: 0;
+}
+
+section > img:nth-of-type(2) {
+  width: 25vw;
+  grid-column: span 3;
+  padding: 0;
+  z-index: 1;
 }
 
 section > button {
@@ -106,6 +133,16 @@ section > button {
   place-items: end;
   margin: 0;
   z-index: 10;
+  transition: 1s;
+}
+
+section > button:hover {
+  transform: translate(0em, -1em);
+}
+
+section > button:focus-visible {
+  outline: none;
+  filter: drop-shadow(0 0 .5em var(--color-focus));
 }
 
 section > button > img {
@@ -114,24 +151,17 @@ section > button > img {
   padding-bottom: 0em;
 }
 
-section > img:first-of-type{
-  padding: 0;
-}
-
-section > img:nth-of-type(2) {
-  width: 25vw;
-  grid-column: span 3;
-  padding: 0;
-}
 
 
-/* hoedjes verplaatsen */
+/* ************* */
+/* hoedjes op tafel verplaatsen */
 section > button.verplaatsen {
   position: fixed;
   left: 52%;
   transform: translateX(-50%);
   bottom: 33vw;
 }
+
 
 
 /* foto gallerij */
@@ -152,6 +182,15 @@ ol:first-of-type li {
   list-style-type: none;
   border: .5vw solid var(--fotolijst);
   height: fit-content;
+  transition: .5s;
+  position: relative;
+  background-color: var(--kastvlakken);
+  display: grid;
+  place-items: center;
+}
+
+ol:first-of-type li:hover{
+  transform: rotate(2deg);
 }
 
 /* om het witte randje onder de foto weg te halen */
@@ -167,6 +206,14 @@ ol:first-of-type li button img{
   width: 7vw;
 }
 
+ol:first-of-type li:nth-of-type(3){
+  transform: rotate(3deg);
+}
+
+ol:first-of-type li:nth-of-type(3):hover{
+  transform: rotate(1deg);
+}
+
 ol:first-of-type li:nth-of-type(2){
   grid-column-start: 3;
   grid-row-start: 1;
@@ -177,7 +224,37 @@ ol:first-of-type li:nth-of-type(5){
   grid-row-start: 2;
   grid-row-end: 4;
   grid-column-start: 1;
+  transition: 1s;
 }
+
+ol:first-of-type li:nth-of-type(5):hover{
+  transform-origin: top center;
+  transform: rotate(50deg);
+}
+
+ol:first-of-type li:nth-of-type(6){
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+
+ol:first-of-type li:hover button img {
+  opacity: 0;
+}
+
+ol:first-of-type li p{
+  position: absolute;
+  margin: 0;
+  opacity: 0;
+}
+
+ol:first-of-type li:hover p{
+  opacity: 1;
+}
+
 
 
 
@@ -191,12 +268,12 @@ ol:nth-of-type(2) {
   width: 25vw;
   height: 35vw;
   border: 2em;
-  border-color: black;
   padding: .5em;
 
   position: absolute;
   top: 6em;
   right: 8em;
+  z-index: 10;
 }
 
 ol:nth-of-type(2) li{
@@ -213,15 +290,26 @@ ol:nth-of-type(2) li button {
   place-items: end center;
   z-index: 10;
   margin: 0;
-  
+  transition: .5s;
+}
+
+ol:nth-of-type(2) li button:hover{
+  transform: translate(0em, -1em);
+}
+
+ol:nth-of-type(2) li button:focus-visible{
+  outline: none;
+  filter: drop-shadow(0 0 .5em var(--color-focus));
 }
 
 ol:nth-of-type(2) li button img{
   width: 6vw;
   padding: 0;
-
 }
 
+
+
+/* *********** */
 /* hoedje naar hoofd */
 ol:nth-of-type(2) li button.verplaatsen{
   position: fixed;
@@ -246,6 +334,9 @@ ol:nth-of-type(2) li button.verplaatsen{
   }
 } */
 
+
+
+
 /* teksten */
 
 section:nth-of-type(2) {
@@ -253,10 +344,10 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(2) article {
-  background-color: white;
+  background-color: var(--artikel);
   border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
   padding: 1.5vw;
-  box-shadow: .2em .2em 1em rgba(0, 0, 0, 0.418);
+  box-shadow: .2em .2em 1em var(--artikelschaduw);
   visibility: hidden;
   position: fixed;
   left: 62vw;
@@ -283,11 +374,15 @@ section:nth-of-type(2) p {
 /* vloer */
 
 div {
+  /* display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  border: .2em solid black; */
   width: 100vw;
   height: 13vw;
   background-color: var(--vloer);
   position: fixed;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
 }
 

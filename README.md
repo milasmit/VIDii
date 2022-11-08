@@ -188,5 +188,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 5. https://disney.fandom.com/wiki/Goofy_Through_the_Years. Hielp me met de tijdlijn van Goofy.
 6. https://disney.fandom.com/wiki/Goofy. Alles over Goofy.
 7. https://www.w3schools.com/css/css3_buttons.asp. Om te kijken hoe ik een button allemaal kon stylen. Vooral om te kijken hoe ik heb onzichtbaar kan maken.
+8. https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow. Voor de focus states van de buttons.
 
 </details>
