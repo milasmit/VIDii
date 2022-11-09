@@ -10,6 +10,8 @@
 body {
   margin:0;
   background-color: var(--achtergrond);
+  background-image: url(/images/behang2.svg);
+  background-repeat: repeat;
   position: relative;
   width: 100vw;
 }
@@ -107,9 +109,10 @@ section:first-of-type {
   grid-template-rows: auto auto;
   width: 30vw;
   gap: 0;
-  position: absolute;
-  left: 8.5em;
-  top: 50vh;
+  position: fixed;
+  left: 8.5vw;
+  bottom: 11vw;
+  z-index: 2;
 }
 
 section > img {
@@ -137,12 +140,12 @@ ol:nth-of-type(2) {
   background-color: var(--kastachtergrond);
   width: 25vw;
   height: 35vw;
-  border: 2em;
-  padding: .5em;
+  border: 2vw;
+  padding: .5vw;
 
-  position: absolute;
-  top: 6em;
-  right: 8em;
+  position: fixed;
+  bottom: 9vw;
+  right: 8vw;
   z-index: 10;
 }
 
@@ -153,8 +156,12 @@ ol:nth-of-type(2) li{
   padding: 0em;
   display: grid;
   place-items: end center;
+  
 }
 
+ol:nth-of-type(2) li > img{
+  width: 6vw;
+}
 
 
 
@@ -169,6 +176,7 @@ ol:nth-of-type(2) li{
 .hoed {
   z-index: 10;
   transition: transform .5s;
+  margin: 0;
 }
 
 .hoed:hover {
@@ -185,6 +193,7 @@ ol:nth-of-type(2) li{
   width: 6vw;
   padding: 0;
   display:block;
+  margin: 0;
 }
 
 
@@ -282,9 +291,9 @@ ol:first-of-type {
   grid-template-rows: auto auto auto;
   padding: .5em;
 
-  position: absolute;
-  top: 6em;
-  left: 8em;
+  position: fixed;
+  bottom: 26vw;
+  left: 8vw;
 }
 
 ol:first-of-type li {
@@ -364,6 +373,9 @@ ol:first-of-type li:hover p{
   opacity: 1;
 }
 
+ol:first-of-type li:nth-of-type(8){
+  transform: rotate(-3deg) translate(.5em, .3em);
+}
 
 
 

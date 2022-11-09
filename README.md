@@ -42,29 +42,47 @@ Mijn startniveau is: blauw, maar randje rood denk ik
 
 
 
-## Voortgang/Feedback 1
+## Voortgang/Feedback 1 met Isabel
 
 <details>
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
 
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  De fotolijstjes op de achtergrond kunnen ook familiefoto's zijn, en dat je dan ook informatie krijgt over de familie van Goofy. Ik had eerst het idee om foto's van Goofy zelf daar te hangen.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb gezocht naar foto's van de familie van Goofy, want ik had tijdens mijn onderzoek wel al onderzoek gedaan naar zijn familie, maar ik had nog geen foto's. Die foto's heb ik in de lijstjes geplaatst.
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Goofy zelf laten bewegen, dat hij bijvoorbeeld bijna valt.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb dit niet gedaan omdat ik dan (denk ik) goofy helemaal zelf zou moeten maken, want ik kan een afbeelding niet veranderen. 
 
 
 
   ### Bevinding 3:
-  ...
+  Zijn persoonlijkheid nog beter terug laten komen door kleine grapjes / foutjes toe te voegen. 
+
+  ### oplossing:
+  Ik heb achter 1 schilderij een gat in de muur gemaakt, omdat dat past bij zijn onhandigheid, maar ook bij zijn creatieve manier van oplossen.
+
+
+  ### Bevinding 4:
+  De hoedjes naar zijn hoofd laten verplaatsen als je er op klikt, alsof hij ze opdoet.
+
+  ### oplossing:
+  Ik heb het na een paar eigen pogingen laten doen. Mijn eigen pogingen: 
+  <img src="/readme-images/hoedverplaatsen1.jpg" width="375px" alt="poging 1 hoedjes verplaatsen">
+  <img src="/readme-images/hoedverplaatsen2.jpg" width="375px" alt="poging 2 hoedjes verplaatsen"> 
+
+
+  ### Bevinding 5:
+  Nog andere decoratie toevoegen om het een huiselijkere sfeer te geven.
+
+  ### oplossing:
 
 </details>
 
@@ -80,7 +98,7 @@ Mijn startniveau is: blauw, maar randje rood denk ik
   Ik moet mijn knoppen states geven zodat het duidelijk is dat er interactie plaats vindt.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb mijn knoppen (de hoeden) een hover en focus state gegeven. Aangezien er bij het klikken al iets gebeurd vond ik het niet nodig om ook een active state toe te voegen. Bij de hover state vliegt het hoedje omhoog, en bij de focus state komt er een gloed achter de hoedjes.
 
 
 
@@ -189,5 +207,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 6. https://disney.fandom.com/wiki/Goofy. Alles over Goofy.
 7. https://www.w3schools.com/css/css3_buttons.asp. Om te kijken hoe ik een button allemaal kon stylen. Vooral om te kijken hoe ik heb onzichtbaar kan maken.
 8. https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow. Voor de focus states van de buttons.
+9. https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat. Voor het behang.
 
 </details>
