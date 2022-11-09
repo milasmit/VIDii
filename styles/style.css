@@ -128,39 +128,148 @@ section > img:nth-of-type(2) {
   z-index: 1;
 }
 
-section > button {
+/* kast */
+
+ol:nth-of-type(2) {
   display: grid;
-  place-items: end;
-  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: var(--kastachtergrond);
+  width: 25vw;
+  height: 35vw;
+  border: 2em;
+  padding: .5em;
+
+  position: absolute;
+  top: 6em;
+  right: 8em;
   z-index: 10;
-  transition: 1s;
 }
 
-section > button:hover {
-  transform: translate(0em, -1em);
+ol:nth-of-type(2) li{
+  background-color: var(--kastvlakken);
+  margin: .3em;
+  list-style-type: none;
+  padding: 0em;
+  display: grid;
+  place-items: end center;
 }
 
-section > button:focus-visible {
+
+
+
+
+
+
+
+
+/**************************/
+/* hoedjes op bijzettafel */
+/* hoedjes in kast */
+.hoed {
+  z-index: 10;
+  transition: transform .5s;
+}
+
+.hoed:hover {
+  transform: translateY(-1em);
+}
+
+.hoed:focus-visible {
   outline: none;
   filter: drop-shadow(0 0 .5em var(--color-focus));
 }
 
-section > button > img {
+.hoed img,
+.hoed.op.vlieg.terug img {
   width: 6vw;
-  padding: .5em;
-  padding-bottom: 0em;
+  padding: 0;
+  display:block;
 }
 
 
 
-/* ************* */
-/* hoedjes naar hoofd */
-section > button.verplaatsen {
+
+
+/* ***************** */
+/* hoedje verstoppen */
+.hoed.hide{
+  opacity:0;
+  pointer-events: none;
+}
+
+
+/********************/
+/* kopie van hoedje */
+
+.hoed.op {
   position: fixed;
-  left: 52%;
-  transform: translateX(-50%);
+  left: calc(52% - 3vw);
+  bottom: 32.5vw;
+  opacity:0;
+}
+
+/* hoedjes net anders zodat ze goed op goofy staan */
+.hoed.op[data-id="eerst"] {
+  left: calc(51.875% - 3vw);
+}
+
+.hoed.op[data-id="grijs"] {
+  left: calc(52.25% - 3vw);
+}
+
+.hoed.op[data-id="rond"] {
+  left: calc(52% - 3vw);
+  bottom: 31vw;
+}
+
+.hoed.op[data-id="oranje"] {
+  left: calc(51.875% - 3vw);
   bottom: 33vw;
 }
+
+.hoed.op[data-id="groen"] {
+  left: calc(51% - 3vw);
+}
+
+
+/**************************/
+/* dan naar goofy vliegen */
+
+.hoed.vlieg {
+  opacity: 1;
+  animation: vliegHeen 1 .5s ease-out forwards;
+}
+
+@keyframes vliegHeen {
+  0% {
+    transform: translate( calc(var(--deltaX) * 1px), calc(var(--deltaY) * 1px) );
+  }
+  100% {
+    transform: translate( 0, 0 );
+  }
+}
+
+
+/****************/
+/* terugvliegen */
+
+.hoed.terug {
+  animation: vliegTerug 1 .5s ease-out forwards;
+}
+
+@keyframes vliegTerug {
+  0% {
+    transform: translate( 0, 0 );    
+  }
+  100% {
+    transform: translate( calc(var(--deltaX) * 1px), calc(var(--deltaY) * 1px) );
+  }
+}
+
+
+
+
 
 
 
@@ -255,84 +364,6 @@ ol:first-of-type li:hover p{
   opacity: 1;
 }
 
-
-
-
-/* kast */
-
-ol:nth-of-type(2) {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  background-color: var(--kastachtergrond);
-  width: 25vw;
-  height: 35vw;
-  border: 2em;
-  padding: .5em;
-
-  position: absolute;
-  top: 6em;
-  right: 8em;
-  z-index: 10;
-}
-
-ol:nth-of-type(2) li{
-  background-color: var(--kastvlakken);
-  margin: .3em;
-  list-style-type: none;
-  padding: 0em;
-  display: grid;
-  place-items: end center;
-}
-
-ol:nth-of-type(2) li button {
-  display: grid;
-  place-items: end center;
-  z-index: 10;
-  margin: 0;
-  transition: .5s;
-}
-
-ol:nth-of-type(2) li button:hover{
-  transform: translate(0em, -1em);
-}
-
-ol:nth-of-type(2) li button:focus-visible{
-  outline: none;
-  filter: drop-shadow(0 0 .5em var(--color-focus));
-}
-
-ol:nth-of-type(2) li button img{
-  width: 6vw;
-  padding: 0;
-}
-
-
-
-/* *********** */
-/* hoedje naar hoofd */
-ol:nth-of-type(2) li button.verplaatsen{
-  position: fixed;
-  left: 52%;
-  transform: translateX(-50%);
-  bottom: 33vw;
-  /* animation: verplaatsen;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-play-state: running;
-  animation-fill-mode: forwards; */
-}
-
-/* @keyframes verplaatsen {
-  0%{
-    transform: translate(0deg) rotate(0deg);
-  }
-
-  100%{
-    transform: translate(-28vw, 5vw) rotate(360deg) ;
-  }
-} */
 
 
 
