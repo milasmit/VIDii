@@ -7,10 +7,11 @@
   box-sizing:border-box;  
 }
 
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat */
 body {
   margin:0;
   background-color: var(--achtergrond);
-  background-image: url(./images/behang2.svg);
+  background-image: url(/images/behang2.svg);
   background-repeat: repeat;
   position: relative;
   width: 100vw;
@@ -39,6 +40,7 @@ button:not([disabled]) {
   --color-focus: crimson;
   --artikel: white;
   --artikelschaduw: rgba(0, 0, 0, 0.418);
+  --bal: rgb(244, 57, 57);
 }
 
 @media (prefers-color-scheme:dark){
@@ -53,8 +55,35 @@ button:not([disabled]) {
   --artikel: rgb(56, 47, 47);
   --artikelschaduw: rgba(144, 143, 143, 0.418);
   }
+
+  body.light {
+    --color-headings:crimson;
+    --kleur-p: black;
+    --achtergrond:rgb(251, 191, 78);
+    --fotolijst:rgb(120, 51, 14);
+    --vloer:rgb(87, 49, 15);
+    --kastvlakken: rgb(207, 161, 137);
+    --kastachtergrond: rgb(173, 97, 57);
+    --color-focus: crimson;
+    --artikel: white;
+    --artikelschaduw: rgba(0, 0, 0, 0.418);
+    --bal: rgb(244, 57, 57);
+  }
 }
 
+body.dark {
+  --achtergrond:rgb(52, 88, 55);
+  --fotolijst:rgb(41, 31, 25);
+  --vloer:rgb(49, 31, 15);
+  --kastvlakken: rgb(104, 67, 47);
+  --kastachtergrond: rgb(41, 31, 25);
+  --color-headings:white;
+  --kleur-p: white;
+  --artikel: rgb(56, 47, 47);
+  --artikelschaduw: rgba(144, 143, 143, 0.418);
+
+  background-image: url("/images/behang-dark.svg");
+}
 
 
 
@@ -89,6 +118,7 @@ button {
 
 
 /* goofy */
+/* bron: https://stackoverflow.com/questions/2005954/center-a-positionfixed-element. */
 
 main > img:nth-of-type(1) {
   width: 20vw;
@@ -96,13 +126,67 @@ main > img:nth-of-type(1) {
   bottom: 7vw;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
+}
+
+
+/* stalamp */
+main > img:nth-of-type(2){
+  width: 9vw;
+  position: fixed;
+  bottom: 10vw;
+  left: 1vw;
+  z-index: 1;
+}
+
+
+/* max */
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations */
+main > img:nth-of-type(3){
+  position: fixed;
+  width: 16vw;
+  right: -16vw;
+  bottom: 7vw;
+  z-index: 15;
+  animation: kiekeboe 50s linear 20s infinite;
+}
+
+@keyframes kiekeboe {
+  0% {
+    transform: none;
+  }
+
+  5% {
+    transform-origin: center bottom;
+    transform: translate(-1.5vw, 0vw) rotate(-40deg);
+  }
+
+  10% {
+    transform-origin: center bottom;
+    transform: translate(-1.5vw, 0vw) rotate(-40deg);
+  }
+
+  15%, 100% {
+    transform: none;
+  }
+}
+
+
+
+/* kleed */
+main > img:nth-of-type(4){
+  position: fixed;
+  width: 50vw;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3vw;
   z-index: 1;
 }
 
 
 
 /* bijzettafel */
-
+/* bron: https://css-tricks.com/snippets/css/complete-guide-grid/ */
 section:first-of-type {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -110,7 +194,7 @@ section:first-of-type {
   width: 30vw;
   gap: 0;
   position: fixed;
-  left: 8.5vw;
+  left: 10vw;
   bottom: 11vw;
   z-index: 2;
 }
@@ -131,8 +215,10 @@ section > img:nth-of-type(2) {
   z-index: 1;
 }
 
-/* kast */
 
+
+/* kast */
+/* bron: https://css-tricks.com/snippets/css/complete-guide-grid/ */
 ol:nth-of-type(2) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -144,7 +230,7 @@ ol:nth-of-type(2) {
   padding: .5vw;
 
   position: fixed;
-  bottom: 9vw;
+  bottom: 10vw;
   right: 8vw;
   z-index: 10;
 }
@@ -183,6 +269,7 @@ ol:nth-of-type(2) li > img{
   transform: translateY(-1em);
 }
 
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow */
 .hoed:focus-visible {
   outline: none;
   filter: drop-shadow(0 0 .5em var(--color-focus));
@@ -283,7 +370,6 @@ ol:nth-of-type(2) li > img{
 
 
 /* foto gallerij */
-
 ol:first-of-type {
   display: grid;
   gap: .5vw;
@@ -293,7 +379,7 @@ ol:first-of-type {
 
   position: fixed;
   bottom: 26vw;
-  left: 8vw;
+  left: 9.5vw;
 }
 
 ol:first-of-type li {
@@ -345,11 +431,14 @@ ol:first-of-type li:nth-of-type(5){
   transition: 1s;
 }
 
+/* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin */
 ol:first-of-type li:nth-of-type(5):hover{
   transform-origin: top center;
   transform: rotate(50deg);
 }
 
+
+/* gat */
 ol:first-of-type li:nth-of-type(6){
   grid-row-start: 2;
   grid-row-end: 4;
@@ -359,6 +448,13 @@ ol:first-of-type li:nth-of-type(6){
   z-index: -1;
 }
 
+
+ol:first-of-type li button:focus-visible{
+  outline: none;
+  transform: scale(.9);
+}
+
+/* tekst laten verschijnen */
 ol:first-of-type li:hover button img {
   opacity: 0;
 }
@@ -369,7 +465,7 @@ ol:first-of-type li p{
   opacity: 0;
 }
 
-ol:first-of-type li:hover p{
+ol:first-of-type li:hover p {
   opacity: 1;
 }
 
@@ -388,7 +484,7 @@ section:nth-of-type(2) {
 
 section:nth-of-type(2) article {
   background-color: var(--artikel);
-  border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+  border-radius: 10%;
   padding: 1.5vw;
   box-shadow: .2em .2em 1em var(--artikelschaduw);
   visibility: hidden;
@@ -401,6 +497,7 @@ section:nth-of-type(2) article {
 }
 
 /* het driehoekje van de tekstwolk */
+/* bron: https://projects.verou.me/bubbly/ */
 section:nth-of-type(2) article:after {
 	content: '';
 	position: absolute;
@@ -429,13 +526,30 @@ section:nth-of-type(2) p {
 
 
 
-/* vloer */
 
-div {
-  /* display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
-  border: .2em solid black; */
+/* lichtknopje */
+section:nth-of-type(3) button{
+  width: 2vw;
+  position: fixed;
+  left: 40vw;
+  bottom: 30vw;
+  z-index: 15;
+}
+
+section:nth-of-type(3) button img {
+  width: 2vw;
+}
+
+ button > img.dark {
+  content: url("/images/light-off.svg");
+ }
+
+
+
+
+/* vloer */
+/* bron: https://www.w3schools.com/CSSREF/pr_pos_z-index.php */
+div{
   width: 100vw;
   height: 13vw;
   background-color: var(--vloer);

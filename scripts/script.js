@@ -103,3 +103,36 @@ function hoedIsTerug() {
     // de clone verwijderen
     cloneHat.remove();
 }
+
+// Bron: https://codepen.io/adhuham/pen/BaNroxd
+var deButtonLight = document.querySelector("section:nth-of-type(3) button");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme:dark)");
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme == "dark") {
+    document.body.classList.toggle("dark")
+} else if (currentTheme == "light") {
+    document.body.classList.toggle("light");
+}
+
+deButtonLight.addEventListener("click", darkMode);
+
+function darkMode(){
+    var lichtknop = document.querySelector("section:nth-of-type(3) button > img");
+    lichtknop.classList.toggle("dark");
+
+    if (prefersDarkScheme.matches) {
+        document.body.classList.toggle("light");
+        var theme = document.body.classList.contains("light")
+        ? "light"
+        : "dark";
+    } else {
+        document.body.classList.toggle("dark");
+        var theme = document.body.classList.contains("dark")
+        ? "dark"
+        : "light";
+    }
+
+    localStorage.setItem("theme", theme);
+
+}
