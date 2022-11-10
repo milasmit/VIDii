@@ -56,19 +56,20 @@ button:not([disabled]) {
   --artikelschaduw: rgba(144, 143, 143, 0.418);
   }
 
-  body.light {
-    --color-headings:crimson;
-    --kleur-p: black;
-    --achtergrond:rgb(251, 191, 78);
-    --fotolijst:rgb(120, 51, 14);
-    --vloer:rgb(87, 49, 15);
-    --kastvlakken: rgb(207, 161, 137);
-    --kastachtergrond: rgb(173, 97, 57);
-    --color-focus: crimson;
-    --artikel: white;
-    --artikelschaduw: rgba(0, 0, 0, 0.418);
-    --bal: rgb(244, 57, 57);
-  }
+}
+
+body.light {
+  --color-headings:crimson;
+  --kleur-p: black;
+  --achtergrond:rgb(251, 191, 78);
+  --fotolijst:rgb(120, 51, 14);
+  --vloer:rgb(87, 49, 15);
+  --kastvlakken: rgb(207, 161, 137);
+  --kastachtergrond: rgb(173, 97, 57);
+  --color-focus: crimson;
+  --artikel: white;
+  --artikelschaduw: rgba(0, 0, 0, 0.418);
+  --bal: rgb(244, 57, 57);
 }
 
 body.dark {
