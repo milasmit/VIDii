@@ -11,7 +11,7 @@
 body {
   margin:0;
   background-color: var(--achtergrond);
-  background-image: url("/VIDii/images/behang2.svg");
+  background-image: url("../images/behang2.svg");
   background-repeat: repeat;
   position: relative;
   width: 100vw;
@@ -82,7 +82,7 @@ body.dark {
   --artikel: rgb(56, 47, 47);
   --artikelschaduw: rgba(144, 143, 143, 0.418);
 
-  background-image: url("VIDii/images/behang-dark.svg");
+  background-image: url("../images/behang-dark.svg");
 }
 
 
@@ -541,7 +541,7 @@ section:nth-of-type(3) button img {
 }
 
  button > img.dark {
-  content: url("./VIDii/images/light-off.svg");
+  content: url("../images/light-off.svg");
  }
 
 
